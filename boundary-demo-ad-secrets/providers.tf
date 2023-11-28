@@ -16,7 +16,7 @@ terraform {
     }
   }
   cloud {
-    organization = "swhashi"
+    organization = "cdunlap"
     workspaces {
       name = "boundary-demo-ad-secrets"
     }

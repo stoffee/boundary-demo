@@ -6,7 +6,7 @@ terraform {
     }
     hcp = {
       source  = "hashicorp/hcp"
-      version = "0.52.0"
+      version = "0.65.0"
     }
     boundary = {
       source  = "hashicorp/boundary"
@@ -24,7 +24,7 @@ terraform {
     }
   }
   cloud {
-    organization = "swhashi"
+    organization = "cdunlap"
     workspaces {
       name = "boundary-demo-targets"
     }
@@ -50,4 +50,6 @@ provider "vault" {
   namespace = "admin"
 }
 
-provider "hcp" {}
+provider "hcp" {
+  project_id = var.hcp_project_id
+  }
